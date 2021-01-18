@@ -2,13 +2,9 @@ registry_namespace="hiii"
 registry_area="cn-shenzhen"
 
 case $cluster in
-    'xgo')
-        registry_area="eu-central-1"
-        registry_namespace="xgoteam"
-        ;;
-    'xgo-test')
+    'lab')
         registry_area="cn-hongkong"
-        registry_namespace="xgoteam-test"
+        registry_namespace="tomhjx"
         ;;
 esac
 
