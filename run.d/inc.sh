@@ -66,7 +66,7 @@ function say_last_progress_status() {
 function git_pull_or_clone_web_src_quickly()
 {
     branch=$2
-    repo=ssh://git@gitlab.hiii-life.com:19901/hiii/${1}.git
+    repo=git@github.com:tomhjx/${1}.git
     dir=${ROOT_DIR}/src/web/${1}
     git_pull_or_clone $repo $dir $branch
 }

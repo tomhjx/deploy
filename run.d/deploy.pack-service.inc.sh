@@ -10,6 +10,10 @@
 function before_build_image()
 {
    pack_dist_dir="${src_dir}"
+   if [ ! -z "${src_pack_dist_dir}" ]; then
+      pack_dist_dir="${src_dir}/${src_pack_dist_dir}"
+   fi
+
    docker_file_name="Dockerfile"
    deploy_dir=${repo_dir}
    if [ ! -z "${subapp}" ]; then

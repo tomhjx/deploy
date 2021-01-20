@@ -1,7 +1,7 @@
 # 拉取构建服务的源码
 function pull_src()
 {
-    repo_root="ssh://git@gitlab.hiii-life.com:19901/${repo_group}"
+    repo_root="${repo_root}/${repo_group}"
     src_repo_url="${repo_root}/${app}.git"
     src_dir=${ROOT_DIR}/deploy/repo/${app}
     repo_dir=${ROOT_DIR}/deploy/repo/deploy.${app}

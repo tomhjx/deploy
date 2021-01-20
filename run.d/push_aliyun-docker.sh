@@ -10,11 +10,12 @@ PARENT_DIR=`dirname $0`
 name=$1
 dockerFile=$2
 registry_area=$3
+registry_namespace=$4
 if [ -z "${registry_area}" ];then
     registry_area="cn-shenzhen"
 fi
 
-fullName="registry.${registry_area}.aliyuncs.com/hiii/${name}"
+fullName="registry.${registry_area}.aliyuncs.com/${registry_namespace}/${name}"
 
 info "docker file path: ${dockerFile}"
 

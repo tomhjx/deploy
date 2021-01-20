@@ -1,5 +1,6 @@
 registry_namespace="hiii"
 registry_area="cn-shenzhen"
+repo_root="git@github.com:tomhjx"
 
 case $cluster in
     'lab')
