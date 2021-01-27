@@ -10,10 +10,10 @@ function build_image()
         image_name="${app}-${subapp}"
     fi
 
-    if [ -z "${is_com_registry}" ]; then
+    if [ -z "${com_registry}" ]; then
         image_local_tag="${image_name}:${tag}"
     else
-        image_local_tag="com:${image_name}..${tag}"
+        image_local_tag="${com_registry}:${image_name}..${tag}"
     fi
 
     image_tag="${image_local_tag}"

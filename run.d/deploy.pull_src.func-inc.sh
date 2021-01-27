@@ -1,7 +1,14 @@
 # 拉取构建服务的源码
 function pull_src()
 {
-    repo_root="${repo_root}/${repo_group}"
+    if [ -z "${repo_root}" ]; then
+        failed "repo_group变量必须是合法的git仓库地址"
+    fi
+
+    if [ ! -z "${repo_group}" ]; then
+        repo_root="${repo_root}/${repo_group}"
+    fi
+
     src_repo_url="${repo_root}/${app}.git"
     src_dir=${ROOT_DIR}/deploy/repo/${app}
     repo_dir=${ROOT_DIR}/deploy/repo/deploy.${app}

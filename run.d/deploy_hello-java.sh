@@ -8,7 +8,7 @@
 cluster="lab"
 app="hello-java"
 subapp="service"
-repo_group="tomhjx"
+# repo_group="tomhjx"
 docker_build_dir="build"
 PARENT_DIR=`dirname $0`
 . ${PARENT_DIR}/deploy.pack-service.inc.sh
